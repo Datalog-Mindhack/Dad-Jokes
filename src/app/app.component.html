@@ -8,36 +8,76 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <style type="text/css">
+  @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
+  
+  * {
+    box-sizing: border-box;
+  }
 
   main {
-    /* padding: 20px; */
+    background-color: #C1F4C5;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    resize: both;
-    overflow: auto;
+    margin: 0;
+  }
+  .container{
+    background-color: #f6f1f4;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0.1), 0 6px 6px rgba(0, 0, 0.1);
+    padding: 50px 20px;
+    max-width: 100%;
+    width: 600px;
+    text-align: center;
   }
 
-  main div {
-    background: black;
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    width: 50%;
-    padding: 20px;
-    resize: both;
-    overflow: auto;
+  h3{
+    margin: 0;
+    letter-spacing: 2px;
+    opacity: 1;
   }
-  a {
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  .joke{
+    font-size: 22px;
+    color: black;
+    line-height: 40px;
+    margin: 50px auto;
+    max-width: 600px;
   }
+
+  .btn{
+    background-color: rgb(184, 95, 196);
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1), 0 6px 6px rgba(0, 0, 0,0.1);
+    color: black;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 10px 30px;
+  }
+  .btn:active{
+    transform: scale(0.98);
+  }
+
+  .fa-thin{
+    margin-left: 5px;
+  }
+
 </style>
 
-<main>
-  <div>
-    <h1>Coding challenge</h1>
-    <p>Get jokes from <a target="_blank" href="//icanhazdadjoke.com/api">{{title}}</a> and show them</p>
+ <main>
+  <div class="container">
+    <h3>Try Not To Laugh Challenge</h3>
+    <div class="joke" id="joke">
+      Here goes the joke!
+    </div>
+     <button class="btn" id="get_joke">
+       Get Another Joke
+       <i class="fa-thin fa-face-grin-squint-tears"></i>
+     </button>
   </div>
+  
 </main>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
